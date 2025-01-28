@@ -6,6 +6,8 @@
 #include "config.h"
 #include "oled.h"
 #include "sr04.h"
+#include "leds.h"
+
 
 //--Prototypes
 void App_setup(void);

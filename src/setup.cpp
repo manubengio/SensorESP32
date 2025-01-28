@@ -21,6 +21,10 @@ void App_setup(void){
     pinMode(TRIG_PIN, OUTPUT);
     pinMode(ECHO_PIN, INPUT);
 
+    pinMode(LEDG_PIN, OUTPUT);
+    pinMode(LEDY_PIN, OUTPUT);
+    pinMode(LEDR_PIN, OUTPUT);
+
     oled88_init();
     oled88_test();
     oled88_bienvenida();
