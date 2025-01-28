@@ -5,6 +5,7 @@
 #include <Arduino.h>
 #include "config.h"
 #include "oled.h"
+#include "sr04.h"
 
 //--Prototypes
 void App_setup(void);

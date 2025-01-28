@@ -44,6 +44,7 @@ float pressure;
 
 //--Functions
 void App_loop(void){
+    Sense_distance();
     generate_random_measures();
     oled88_update();
 }
