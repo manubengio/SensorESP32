@@ -1,6 +1,3 @@
-#ifndef _sr04_h_
-#define _sr04_h_
-
 #include "sr04.h"
 #include <Arduino.h>
 
@@ -30,4 +27,3 @@ void Sense_distance(void){
   delay(500);  // Espera medio segundo antes de la siguiente medición
 }
 
-#endif
