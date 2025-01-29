@@ -42,10 +42,12 @@ float temperature;
 float humidity;
 float pressure;
 
+
 //--Functions
 void App_loop(void){
-    Sense_distance();
-    Led_GYR();
+    int distance;
+    distance = Sense_distance();
+    Led_GYR(distance);
     generate_random_measures();
     oled88_update();
 }

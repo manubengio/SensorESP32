@@ -7,6 +7,6 @@
 #define ECHO_PIN 22  // Pin GPIO para ECHO
 
 
-void Sense_distance(void);
+int Sense_distance(void);
 
 #endif

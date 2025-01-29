@@ -9,8 +9,8 @@
 #define BUZZER_PIN 5   // Pin para BUZZER
 
 
-void Led_GYR(void);
-void Sense_distance(void);
+void Led_GYR(int);
+
 
 
 #endif

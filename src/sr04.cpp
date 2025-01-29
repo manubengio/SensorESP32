@@ -3,9 +3,9 @@
 
 
 long duration;  // Variable para almacenar el tiempo del pulso
-int distance;   // Variable para almacenar la distancia
+int distance; //Variable para almacenar la distancia
 
-void Sense_distance(void){
+int Sense_distance(void){
 
 // Enviar un pulso en el pin TRIG
   digitalWrite(TRIG_PIN, LOW);
@@ -25,5 +25,6 @@ void Sense_distance(void){
   Serial.println(" cm");
 
   delay(500);  // Espera medio segundo antes de la siguiente medición
+  return distance;
 }
 

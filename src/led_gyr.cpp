@@ -2,13 +2,11 @@
 #include "sr04.h" // Incluir el archivo que contiene la logica del sensor ultrasonico
 #include "leds.h"  // Incluir el archivo que contiene la lógica de los LEDs
 
-extern int distance;  // Declarar la variable 'distance' que está definida en sr04.cpp
 
 
 
-void Led_GYR(void) {
-  // Medir la distancia
-  Sense_distance();  
+void Led_GYR(int distance) {
+
 
   // Apagar todos los LEDs y el buzzer antes de establecer los nuevos estados
   digitalWrite(LEDG_PIN, LOW);
