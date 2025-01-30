@@ -37,13 +37,13 @@ void Led_GYR(int distance) {
       digitalWrite(LEDY_PIN, LOW);
       digitalWrite(LEDR_PIN, LOW);
       digitalWrite(BUZZER_PIN, HIGH);
-      delay(200);
+      delay(100);
 
       digitalWrite(LEDG_PIN, HIGH);
       digitalWrite(LEDY_PIN, HIGH);
       digitalWrite(LEDR_PIN, HIGH);
       digitalWrite(BUZZER_PIN, LOW);
-      delay(200);
+      delay(100);
     }
   }
 }
