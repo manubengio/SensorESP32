@@ -27,8 +27,8 @@ void oled88_init(void);
 void oled88_test(void);
 void oled88_clear(void);
 void oled88_bienvenida(void);
-void oled88_update(void);
+void oled88_update(int);
 void oled88_printTit(const char * tittle);
-void oled88_printV(float value1,float value2,float value3);
+void oled88_printV(int);
 
 #endif
