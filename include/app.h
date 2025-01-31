@@ -5,6 +5,9 @@
 #include <Arduino.h>
 #include "config.h"
 #include "oled.h"
+#include "sr04.h"
+#include "leds.h"
+
 
 //--Prototypes
 void App_loop(void);

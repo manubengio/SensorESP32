@@ -21,9 +21,8 @@ U8X8LOG u8x8log;
 uint32_t start_clock=millis();
 
 //--extern variables
-extern float temperature;
-extern float humidity;
-extern float pressure;
+extern int distance;
+
 
 //-Definitions screen area tittle
 areaScreen areaTittle = {
@@ -72,11 +71,11 @@ void oled88_bienvenida(void){
   delay(5000);
 }
 
-void oled88_update(void){
-if ((millis()-start_clock)>=5000){
+void oled88_update(int distance){
+if ((millis()-start_clock)>=1000){
       start_clock=millis();
-      oled88_printTit(" Mediciones:        ");
-      oled88_printV(temperature,humidity,pressure);      
+      oled88_printTit(" Medicion:        ");
+      oled88_printV(distance);      
     }
     delay(10);
 }
@@ -91,15 +90,11 @@ void oled88_printTit(const char * tittle){
 }
 
 //--Print 3 values in value area
-void oled88_printV(float value1,float value2,float value3){
+void oled88_printV(int distance){
     //u8x8.setFont(u8g2_font_9x15_t_cyrillic);
     u8g2.setClipWindow(areaV.xorg,areaV.yorg,areaV.xend,areaV.yend);
     u8g2.setFont(u8g2_font_spleen6x12_mf);
     u8g2.setCursor(0, 30);
-    u8g2.printf(" Temperatura:%3.1f C ",value1);
-    u8g2.setCursor(0, 40);
-    u8g2.printf(" Humedad:%3.1f RH ",value2);
-    u8g2.setCursor(0, 50);
-    u8g2.printf(" Presion:%3.1f bar ",value3);
+    u8g2.printf(" Distancia: %d cm ",distance);
     u8g2.sendBuffer();
 }

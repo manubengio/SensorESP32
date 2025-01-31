@@ -18,8 +18,14 @@ void App_setup(void){
     Serial.begin(SERIAL_BAUDRATE);
 
     //--PINS
-    pinMode(ONBOARD_LED_PIN,OUTPUT);
-    pinMode(LED_PIN,OUTPUT);
+    pinMode(TRIG_PIN, OUTPUT);
+    pinMode(ECHO_PIN, INPUT);
+
+    pinMode(LEDG_PIN, OUTPUT);
+    pinMode(LEDY_PIN, OUTPUT);
+    pinMode(LEDR_PIN, OUTPUT);
+    pinMode(BUZZER_PIN, OUTPUT);
+    
 
     oled88_init();
     oled88_test();

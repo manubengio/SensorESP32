@@ -38,18 +38,15 @@
 #include "app.h"
 
 uint16_t led_delay=200;
-float temperature;
-float humidity;
-float pressure;
+
+
 
 //--Functions
 void App_loop(void){
-    generate_random_measures();
-    oled88_update();
+    
+    int distance = Sense_distance();
+    Led_GYR(distance);
+    oled88_update(distance);
 }
 
-void generate_random_measures(void){
-    temperature=random(40);
-    humidity=random(100);
-    pressure=random(1050);
-}
+
