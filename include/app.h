@@ -11,6 +11,5 @@
 
 //--Prototypes
 void App_loop(void);
-void generate_random_measures(void);
 
 #endif

@@ -14,7 +14,7 @@ int Sense_distance(void){
   delayMicroseconds(10);
   digitalWrite(TRIG_PIN, LOW);
   
-  duration = pulseIn(ECHO_PIN, HIGH);  // Mide el tiempo real de ida y vuelta;  // Este es un valor artificial para pruebas, lo puedes cambiar
+  duration = pulseIn(ECHO_PIN, HIGH);  // Mide el tiempo real de ida y vuelta;  
 
   // Calcular la distancia en centímetros
   distance = duration * 0.0344 / 2;

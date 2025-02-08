@@ -4,20 +4,13 @@
 
 
 
-
 void Led_GYR(int distance) {
-
 
   // Apagar todos los LEDs y el buzzer antes de establecer los nuevos estados
   digitalWrite(LEDG_PIN, LOW);
   digitalWrite(LEDY_PIN, LOW);
   digitalWrite(LEDR_PIN, LOW);
   digitalWrite(BUZZER_PIN, LOW);
-
-  if (distance > 20) {
-    // No encender nada si la distancia es mayor a 20 cm
-    return;
-  }
 
   // Control de LEDs según la distancia
   if (distance <= 20) {

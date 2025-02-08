@@ -1,9 +1,8 @@
 //=======================================================================
 // File:                oled.cpp
-// Author:              Marcelo Castello (https://github.com/mcastellogh)
-// Licence:             GPLV3+
+// Author:              Manuel Bengio (https://github.com/manubengio)
 // Version:             1.0.0
-// Date:                Mayo 2024
+// Date:                Febrero 2025
 // Info:                Proyect template for Electrónica II
 //--REFS:
 //--https://github.com/olikraus/u8g2/wiki/

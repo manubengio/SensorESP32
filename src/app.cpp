@@ -6,10 +6,9 @@
 
 //===================[File header]================================================
 // File:                app.cpp
-// Author:              Marcelo Castello (https://github.com/mcastellogh)
-// Licence:             GPLV3+
+// Author:              Manuel Bengio (https://github.com/manubengio)
 // Version:             1.0.0
-// Date:                Mayo 2024
+// Date:                Febrero 2025
 // Info:                Proyect template for Electrónica II
 
 //====================[Use & storage]============================================
@@ -36,9 +35,6 @@
 
 //--Includes
 #include "app.h"
-
-uint16_t led_delay=200;
-
 
 
 //--Functions

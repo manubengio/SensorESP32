@@ -4,11 +4,6 @@
 //--Includes
 #include <Arduino.h>
 
-//--Hardware PINS definitions
-#define ONBOARD_LED_PIN             2
-#define LED_PIN                     2
-
-
 //--Software constants
 #define SERIAL_BAUDRATE             19200
 
