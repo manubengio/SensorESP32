@@ -36,6 +36,8 @@
 //--Includes
 #include "app.h"
 
+//--extern variables
+extern bool communication;
 
 //--Functions
 void App_loop(void){
@@ -43,6 +45,11 @@ void App_loop(void){
     int distance = Sense_distance();
     Led_GYR(distance);
     oled88_update(distance);
+
+    if(communication){
+    publish(distance);
+    }
+
 }
 
 

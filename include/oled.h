@@ -30,5 +30,7 @@ void oled88_bienvenida(void);
 void oled88_update(int);
 void oled88_printTit(const char * tittle);
 void oled88_printV(int);
+void oled88_connected_wifi(IPAddress ip);
+void oled88_info(const char * info);
 
 #endif

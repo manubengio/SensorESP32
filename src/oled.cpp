@@ -67,7 +67,7 @@ void oled88_bienvenida(void){
   u8g2.print("UTN Electronica II");
   u8g2.setFont(u8g2_font_streamline_all_t); //see https://github.com/olikraus/u8g2/wiki/fntgrpstreamline#streamline_all
   u8g2.sendBuffer();
-  delay(5000);
+  delay(3000);
 }
 
 void oled88_update(int distance){
@@ -96,4 +96,25 @@ void oled88_printV(int distance){
     u8g2.setCursor(0, 30);
     u8g2.printf(" Distancia: %d cm ",distance);
     u8g2.sendBuffer();
+}
+
+
+void oled88_connected_wifi(IPAddress ip) {
+  u8g2.setFont(u8g2_font_spleen6x12_mf); 
+  u8g2.setCursor(10, 20);  
+  u8g2.print("Conectado a WiFi");
+  u8g2.setFont(u8g2_font_6x10_tr);
+  u8g2.setCursor(10, 50);  
+  u8g2.printf("IP: %d.%d.%d.%d", ip[0], ip[1], ip[2], ip[3]);
+  u8g2.sendBuffer();
+  delay(200);
+}
+
+void oled88_info(const char * info) {
+  u8g2.clearBuffer();
+  u8g2.setFont(u8g2_font_spleen6x12_mf); 
+  u8g2.setCursor(10, 30);  
+  u8g2.print(info);
+  u8g2.sendBuffer();
+  delay(2000);
 }

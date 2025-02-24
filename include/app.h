@@ -7,6 +7,7 @@
 #include "oled.h"
 #include "sr04.h"
 #include "leds.h"
+#include "connection.h"
 
 
 //--Prototypes
