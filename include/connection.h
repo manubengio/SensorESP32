@@ -6,6 +6,7 @@
 #include <WiFi.h>
 #include <PubSubClient.h>
 #include <ArduinoJson.h>
+#include "oled.h"
 
 // Variables constantes en memoria flash
 constexpr char ssid[] = "Samsung S22 DE56";

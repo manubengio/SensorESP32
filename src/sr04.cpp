@@ -1,5 +1,5 @@
 #include "sr04.h"
-#include <Arduino.h>
+
 
 
 long duration;  // Variable para almacenar el tiempo del pulso

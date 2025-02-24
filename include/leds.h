@@ -2,6 +2,8 @@
 #define _leds_h_
 
 #include <Arduino.h>
+#include "sr04.h"
+
 
 #define LEDG_PIN 4  // Pin GPIO para LED VERDE
 #define LEDY_PIN 16  // Pin GPIO para LED AMARILLO

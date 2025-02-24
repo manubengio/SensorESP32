@@ -1,6 +1,5 @@
 
-#include "sr04.h" // Incluir el archivo que contiene la logica del sensor ultrasonico
-#include "leds.h"  // Incluir el archivo que contiene la lógica de los LEDs
+#include "leds.h"
 
 
 
