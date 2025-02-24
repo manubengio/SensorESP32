@@ -8,12 +8,12 @@
 #include <ArduinoJson.h>
 #include "oled.h"
 
-// Variables constantes en memoria flash
+// Store constant variables in flash memory
 constexpr char ssid[] = "Samsung S22 DE56";
 constexpr char password[] = "12345678";
 constexpr char mqtt_server[] = "192.168.1.15";
 
-// Declaración de funciones
+// Function declarations
 bool comm_init(void);
 void publish(int);
 

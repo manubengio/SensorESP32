@@ -1,3 +1,13 @@
+//=======================================================================
+
+// File:                connection.cpp
+// Author:              Manuel Bengio (https://github.com/manubengio)
+// Version:             1.0.0
+// Date:                Febrero 2025
+// Info:                Proyect template for Electrónica II
+
+//=======================================================================
+
 #include "connection.h"
 
 
@@ -48,18 +58,18 @@ bool comm_init(void)
 
 
 void publish(int distance) {
-    client.loop();  // Mantiene la conexión MQTT activa
+    client.loop();  // Maintain active MQTT connection
     
     JsonDocument doc;
     doc["sensor"] = "SR04";
     doc["distance"] = distance;
 
-    // Convertir JSON a cadena
+    // JSON to STRING
     char jsonBuffer[200];
     serializeJson(doc, jsonBuffer);
 
-    // Publicar en MQTT
+    // Publish MQTT
     client.publish("Distance", jsonBuffer);
     Serial.println("Mensaje enviado a MQTT: ");
-    Serial.println(jsonBuffer);  // Mostrar el JSON en el monitor serie
+    Serial.println(jsonBuffer);  // Show JSON on serie monitor
 }

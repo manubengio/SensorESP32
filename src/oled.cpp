@@ -1,8 +1,9 @@
 //=======================================================================
 // File:                oled.cpp
-// Author:              Manuel Bengio (https://github.com/manubengio)
-// Version:             1.0.0
-// Date:                Febrero 2025
+// Author:              Marcelo Castello (https://github.com/mcastellogh)
+// Editor:              Manuel Bengio    (https://github.com/manubengio)
+// Version:             1.0.1
+// Date:                Mayo 2024 (Original) Febrero 2025 (Edition)
 // Info:                Proyect template for Electrónica II
 //--REFS:
 //--https://github.com/olikraus/u8g2/wiki/

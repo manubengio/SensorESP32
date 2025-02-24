@@ -5,10 +5,10 @@
 #include "sr04.h"
 
 
-#define LEDG_PIN 4  // Pin GPIO para LED VERDE
-#define LEDY_PIN 16  // Pin GPIO para LED AMARILLO
-#define LEDR_PIN 17  // Pin GPIO para LED ROJO
-#define BUZZER_PIN 5   // Pin para BUZZER
+#define LEDG_PIN 4  //  Green Led
+#define LEDY_PIN 16  // Yellow Led
+#define LEDR_PIN 17  // Red Led
+#define BUZZER_PIN 5   //  Pasive Buzzer
 
 
 void Led_GYR(int);
