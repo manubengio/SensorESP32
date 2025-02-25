@@ -1,31 +1,38 @@
+//=======================================================================
+// File:                led_gyr.cpp
+// Author:              Manuel Bengio (https://github.com/manubengio)
+// Version:             1.0.0
+// Date:                Febrero 2025
+// Info:                Proyect template for Electrónica II
 
-#include "sr04.h" // Incluir el archivo que contiene la logica del sensor ultrasonico
-#include "leds.h"  // Incluir el archivo que contiene la lógica de los LEDs
+//=======================================================================
+
+#include "leds.h"
 
 
 
 void Led_GYR(int distance) {
 
-  // Apagar todos los LEDs y el buzzer antes de establecer los nuevos estados
+  // Turn OFF Leds
   digitalWrite(LEDG_PIN, LOW);
   digitalWrite(LEDY_PIN, LOW);
   digitalWrite(LEDR_PIN, LOW);
   digitalWrite(BUZZER_PIN, LOW);
 
-  // Control de LEDs según la distancia
+  // Control of LED lighting based on distance 
   if (distance <= 20) {
-    digitalWrite(LEDG_PIN, HIGH);  // Encender LED verde
+    digitalWrite(LEDG_PIN, HIGH);  
   }
   if (distance <= 15) {
-    digitalWrite(LEDY_PIN, HIGH);  // Encender LED amarillo
+    digitalWrite(LEDY_PIN, HIGH);  
   }
   if (distance <= 10) {
-    digitalWrite(LEDR_PIN, HIGH);  // Encender LED rojo
+    digitalWrite(LEDR_PIN, HIGH);  
   }
   
-  // Si la distancia es menor o igual a 5 cm, hacer parpadear LEDs y activar buzzer
+  
   if (distance <= 5) {
-    for (int i = 0; i < 3; i++) {  // Parpadeo de 3 veces
+    for (int i = 0; i < 3; i++) {  // Blinking
       digitalWrite(LEDG_PIN, LOW);
       digitalWrite(LEDY_PIN, LOW);
       digitalWrite(LEDR_PIN, LOW);
