@@ -47,6 +47,9 @@ Este proyecto consiste en un sensor de estacionamiento basado en ESP32, utilizan
    pio device monitor
    ```
 
+## Diagrama de conexión 
+![Diagrama de conexión](figures/Diagrama_Conexion.jpg)
+
 ## Uso
 - Una vez cargado el firmware, la pantalla OLED mostrará la distancia medida por el sensor HC-SR04.
 
