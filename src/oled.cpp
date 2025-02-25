@@ -108,7 +108,7 @@ void oled88_connected_wifi(IPAddress ip) {
   u8g2.setCursor(10, 50);  
   u8g2.printf("IP: %d.%d.%d.%d", ip[0], ip[1], ip[2], ip[3]);
   u8g2.sendBuffer();
-  delay(200);
+  delay(2000);
 }
 
 void oled88_info(const char * info) {
