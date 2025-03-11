@@ -10,7 +10,6 @@
 #include "leds.h"
 
 
-
 void Led_GYR(int distance) {
 
   // Turn OFF Leds
@@ -20,18 +19,18 @@ void Led_GYR(int distance) {
   digitalWrite(BUZZER_PIN, LOW);
 
   // Control of LED lighting based on distance 
-  if (distance <= 20) {
+  if (distance <= settings.dist_green) {
     digitalWrite(LEDG_PIN, HIGH);  
   }
-  if (distance <= 15) {
+  if (distance <= settings.dist_yellow) {
     digitalWrite(LEDY_PIN, HIGH);  
   }
-  if (distance <= 10) {
+  if (distance <= settings.dist_red) {
     digitalWrite(LEDR_PIN, HIGH);  
   }
   
   
-  if (distance <= 5) {
+  if (distance <= settings.dist_buzzer) {
     for (int i = 0; i < 3; i++) {  // Blinking
       digitalWrite(LEDG_PIN, LOW);
       digitalWrite(LEDY_PIN, LOW);

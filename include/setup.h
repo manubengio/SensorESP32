@@ -8,6 +8,7 @@
 #include "sr04.h"
 #include "leds.h"
 #include "connection.h"
+#include "persist.h"
 
 //--Prototypes
 void App_setup(void);
