@@ -8,10 +8,10 @@
 
 #include "setup.h"
 
-
 bool communication;
 
-void App_setup(void){
+void App_setup(void)
+{
 
     Serial.begin(SERIAL_BAUDRATE);
 
@@ -23,13 +23,12 @@ void App_setup(void){
     pinMode(LEDY_PIN, OUTPUT);
     pinMode(LEDR_PIN, OUTPUT);
     pinMode(BUZZER_PIN, OUTPUT);
-    
-    
 
     oled88_init();
     oled88_test();
     oled88_bienvenida();
     oled88_clear();
+    load_settings();
     communication = comm_init();
     oled88_clear();
 }

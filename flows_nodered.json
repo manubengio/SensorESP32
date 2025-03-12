@@ -1,0 +1,734 @@
+[
+    {
+        "id": "b8e6b56351e17275",
+        "type": "tab",
+        "label": "Flujo 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "546e5b4d89f7c513",
+        "type": "mqtt-broker",
+        "name": "MQTT ESP32",
+        "broker": "localhost",
+        "port": 1883,
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": 4,
+        "keepalive": 60,
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "db57832237ababc0",
+        "type": "ui_tab",
+        "name": "Distance",
+        "icon": "dashboard",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "a1315bed2946d4fc",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-dark",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#097479",
+                    "value": "#097479",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#097479",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#0eb8c0",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#555555",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#eeeeee",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#097479",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#333333",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "29d527ec18fd2a54",
+        "type": "ui_group",
+        "name": "Default",
+        "tab": "db57832237ababc0",
+        "order": 1,
+        "disp": false,
+        "width": "15",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "e4d146fb9cf01874",
+        "type": "ui_tab",
+        "name": "Parking",
+        "icon": "dashboard",
+        "order": 2,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "c076fa10126c6f87",
+        "type": "ui_group",
+        "name": "Amarillo",
+        "tab": "e4d146fb9cf01874",
+        "order": 2,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "470abc4fab6027fe",
+        "type": "ui_group",
+        "name": "Verde",
+        "tab": "e4d146fb9cf01874",
+        "order": 1,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "d56275c991c25512",
+        "type": "ui_group",
+        "name": "Rojo",
+        "tab": "e4d146fb9cf01874",
+        "order": 3,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "58db76ebb7704245",
+        "type": "ui_group",
+        "name": "Sonora",
+        "tab": "e4d146fb9cf01874",
+        "order": 4,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "c040f68e48f72010",
+        "type": "mqtt in",
+        "z": "b8e6b56351e17275",
+        "name": "",
+        "topic": "Distance",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "546e5b4d89f7c513",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 260,
+        "y": 80,
+        "wires": [
+            [
+                "41ed74554c63e788"
+            ]
+        ]
+    },
+    {
+        "id": "41ed74554c63e788",
+        "type": "json",
+        "z": "b8e6b56351e17275",
+        "name": "",
+        "property": "payload.distance",
+        "action": "",
+        "pretty": true,
+        "x": 450,
+        "y": 80,
+        "wires": [
+            [
+                "31dc925e5b0edb1d"
+            ]
+        ]
+    },
+    {
+        "id": "d5da33bca2d38ef9",
+        "type": "ui_gauge",
+        "z": "b8e6b56351e17275",
+        "name": "",
+        "group": "29d527ec18fd2a54",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Medidor",
+        "label": "cm",
+        "format": "{{msg.payload}}",
+        "min": 0,
+        "max": "20",
+        "colors": [
+            "#ca3838",
+            "#e6e600",
+            "#00b500"
+        ],
+        "seg1": "5",
+        "seg2": "8",
+        "diff": false,
+        "className": "",
+        "x": 960,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "57d7cd564f296a74",
+        "type": "debug",
+        "z": "b8e6b56351e17275",
+        "name": "Debug",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 950,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "060dc8a00aa8f1ee",
+        "type": "ui_chart",
+        "z": "b8e6b56351e17275",
+        "name": "",
+        "group": "29d527ec18fd2a54",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "label": "Distancia en tiempo",
+        "chartType": "line",
+        "legend": "true",
+        "xformat": "HH:mm",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "30",
+        "removeOlder": "2",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "60",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 990,
+        "y": 120,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "31dc925e5b0edb1d",
+        "type": "change",
+        "z": "b8e6b56351e17275",
+        "name": "Json to signal",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.distance",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 660,
+        "y": 80,
+        "wires": [
+            [
+                "d5da33bca2d38ef9",
+                "57d7cd564f296a74",
+                "060dc8a00aa8f1ee"
+            ]
+        ]
+    },
+    {
+        "id": "c2ded6544cd23461",
+        "type": "mqtt out",
+        "z": "b8e6b56351e17275",
+        "name": "",
+        "topic": "Parking",
+        "qos": "0",
+        "retain": "false",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "546e5b4d89f7c513",
+        "x": 960,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "177a8610e85be776",
+        "type": "ui_slider",
+        "z": "b8e6b56351e17275",
+        "name": "",
+        "label": "Distancia LED Amarillo",
+        "tooltip": "",
+        "group": "c076fa10126c6f87",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "outs": "all",
+        "topic": "topic",
+        "topicType": "msg",
+        "min": "10",
+        "max": "15",
+        "step": 1,
+        "className": "",
+        "x": 140,
+        "y": 260,
+        "wires": [
+            [
+                "1772e6cbc734db73",
+                "e47b9ed8c497e6af"
+            ]
+        ]
+    },
+    {
+        "id": "cf0151aa566366b9",
+        "type": "ui_slider",
+        "z": "b8e6b56351e17275",
+        "name": "",
+        "label": "Distancia Led Rojo",
+        "tooltip": "",
+        "group": "d56275c991c25512",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "outs": "all",
+        "topic": "topic",
+        "topicType": "msg",
+        "min": "5",
+        "max": "10",
+        "step": 1,
+        "className": "",
+        "x": 150,
+        "y": 500,
+        "wires": [
+            [
+                "96914633f0563fb9",
+                "d049ebe58a524450"
+            ]
+        ]
+    },
+    {
+        "id": "4946ea870c318256",
+        "type": "ui_slider",
+        "z": "b8e6b56351e17275",
+        "name": "",
+        "label": "Distancia Alarma Sonora",
+        "tooltip": "",
+        "group": "58db76ebb7704245",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "outs": "all",
+        "topic": "topic",
+        "topicType": "msg",
+        "min": "0",
+        "max": "5",
+        "step": 1,
+        "className": "",
+        "x": 150,
+        "y": 600,
+        "wires": [
+            [
+                "5093456e9d9aad49",
+                "2d39d461b0b912f6",
+                "875b0b78b435ae58"
+            ]
+        ]
+    },
+    {
+        "id": "57c355de167c9a23",
+        "type": "function",
+        "z": "b8e6b56351e17275",
+        "name": "dist_green",
+        "func": "flow.set('dist_green', msg.payload);\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 390,
+        "y": 260,
+        "wires": [
+            [
+                "8bf2eb04d78f31ea"
+            ]
+        ]
+    },
+    {
+        "id": "1772e6cbc734db73",
+        "type": "function",
+        "z": "b8e6b56351e17275",
+        "name": "dist_yellow",
+        "func": "flow.set('dist_yellow', msg.payload);\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 430,
+        "y": 380,
+        "wires": [
+            [
+                "8bf2eb04d78f31ea"
+            ]
+        ]
+    },
+    {
+        "id": "96914633f0563fb9",
+        "type": "function",
+        "z": "b8e6b56351e17275",
+        "name": "dist_red",
+        "func": "flow.set('dist_red', msg.payload);\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 380,
+        "y": 480,
+        "wires": [
+            [
+                "8bf2eb04d78f31ea"
+            ]
+        ]
+    },
+    {
+        "id": "5093456e9d9aad49",
+        "type": "function",
+        "z": "b8e6b56351e17275",
+        "name": "dist_buzzer",
+        "func": "flow.set('dist_buzzer', msg.payload);\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 390,
+        "y": 540,
+        "wires": [
+            [
+                "8bf2eb04d78f31ea",
+                "d5ea0287deb502c2"
+            ]
+        ]
+    },
+    {
+        "id": "8bf2eb04d78f31ea",
+        "type": "function",
+        "z": "b8e6b56351e17275",
+        "name": "to JSON",
+        "func": "// Create the JSON object with the 4 values\nmsg.payload = {\n    dist_green: flow.get('dist_green'),  // Get the value of dist_green\n    dist_yellow: flow.get('dist_yellow'),  // Get the value of dist_yellow\n    dist_red: flow.get('dist_red'),  // Get the value of dist_red\n    dist_buzzer: flow.get('dist_buzzer')  // Get the value of dist_buzzer\n};\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 640,
+        "y": 260,
+        "wires": [
+            [
+                "c2ded6544cd23461",
+                "c3532a305875f408"
+            ]
+        ]
+    },
+    {
+        "id": "c3532a305875f408",
+        "type": "debug",
+        "z": "b8e6b56351e17275",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 960,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "2d39d461b0b912f6",
+        "type": "debug",
+        "z": "b8e6b56351e17275",
+        "name": "debug 2",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 370,
+        "y": 700,
+        "wires": []
+    },
+    {
+        "id": "d5ea0287deb502c2",
+        "type": "debug",
+        "z": "b8e6b56351e17275",
+        "name": "debug 3",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 600,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "39a5b434bedd7e68",
+        "type": "ui_slider",
+        "z": "b8e6b56351e17275",
+        "name": "",
+        "label": "Distancia LED Verde",
+        "tooltip": "",
+        "group": "470abc4fab6027fe",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "outs": "all",
+        "topic": "topic",
+        "topicType": "msg",
+        "min": "15",
+        "max": "20",
+        "step": 1,
+        "className": "",
+        "x": 160,
+        "y": 180,
+        "wires": [
+            [
+                "57c355de167c9a23",
+                "8d6c6fa63da5a8eb"
+            ]
+        ]
+    },
+    {
+        "id": "8d6c6fa63da5a8eb",
+        "type": "ui_text",
+        "z": "b8e6b56351e17275",
+        "group": "470abc4fab6027fe",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 370,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "e47b9ed8c497e6af",
+        "type": "ui_text",
+        "z": "b8e6b56351e17275",
+        "group": "c076fa10126c6f87",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 170,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "d049ebe58a524450",
+        "type": "ui_text",
+        "z": "b8e6b56351e17275",
+        "group": "d56275c991c25512",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 260,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "875b0b78b435ae58",
+        "type": "ui_text",
+        "z": "b8e6b56351e17275",
+        "group": "58db76ebb7704245",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 180,
+        "y": 680,
+        "wires": []
+    }
+]

@@ -7,14 +7,14 @@
 #include <PubSubClient.h>
 #include <ArduinoJson.h>
 #include "oled.h"
-
-// Store constant variables in flash memory
-constexpr char ssid[] = "Galaxy S22 DE56";
-constexpr char password[] = "12345678";
-constexpr char mqtt_server[] = "192.168.22.240";
+#include "config.h"
+#include "persist.h"
 
 // Function declarations
 bool comm_init(void);
 void publish(int);
+void processPayload(String);
+void callback(char* topic, byte* payload, unsigned int length);
+
 
 #endif

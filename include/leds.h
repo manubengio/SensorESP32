@@ -3,6 +3,8 @@
 
 #include <Arduino.h>
 #include "sr04.h"
+#include "config.h"
+#include "persist.h"
 
 
 #define LEDG_PIN 4  //  Green Led
@@ -10,9 +12,6 @@
 #define LEDR_PIN 17  // Red Led
 #define BUZZER_PIN 5   //  Pasive Buzzer
 
-
 void Led_GYR(int);
-
-
 
 #endif
